@@ -1,0 +1,4 @@
+<h1>Market News</h1>
+@for(item of newsArticles; track item.title){
+    <lib-stock-row [label]="item.title"></lib-stock-row>
+}
