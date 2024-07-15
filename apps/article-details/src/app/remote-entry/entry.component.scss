@@ -1,3 +1,14 @@
 h2{
-    color:blue;
+    color:white;
+}
+.tickers{
+    display: flex;
+}
+
+.tickers h2{
+    margin-right: 10px;
+}
+
+.tickers div{
+    margin-right: 15px;
 }

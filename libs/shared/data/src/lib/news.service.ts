@@ -37,6 +37,9 @@ export class NewsService {
   newsArticles(){
     return this._news;
   }
+
+  getNewsById(id:string){
+    return this._news.find(news =>news.id === Number(id));
+  }
   
-  constructor() {}
 }

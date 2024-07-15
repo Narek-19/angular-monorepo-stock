@@ -1,0 +1,33 @@
+.news-row-containr{
+    padding:5px 20px;
+    margin-top: 20px;
+    border-bottom:2px solid gray;
+}
+
+.news-title{
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.news-title a{
+    color:white;
+    text-decoration: none;
+}
+
+.news-tegs{
+    display:flex;
+    font-size: 12px;
+    color:gray;
+    padding: 5px 0px;
+}
+
+.news-tegs div{
+    margin-right: 10px;
+}
+
+.tickers-list{
+    display: flex;
+}
+
+.ticker-name{
+    margin-right: 10px;
+}

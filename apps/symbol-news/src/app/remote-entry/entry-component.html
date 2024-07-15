@@ -1,0 +1,60 @@
+@if(filters.length){
+    <h1>[{{filters[0]}}]</h1>
+}
+@else {
+    <h1>Search Tickers</h1>
+}
+
+<div class="header">
+    <div class="filters">
+        @for(filter of filters; track filter){
+            <div class="filter">{{filter}} <span (click)="removeFilter(filter)"> &#10006; </span></div>
+        }
+    </div>
+    <div class="search-section">
+        <button (click)="toggleSearchBar()">&#x2B; Add symbol</button>
+    </div>
+</div>
+@if(searchBarOpen){
+<div class="search-container">
+    <div>
+        <div class="search-bar">
+            <div>&#x2609;</div>
+            <div class="search">
+                <input [formControl]="searchControl" placeholder="Search..."/>
+            </div>
+        </div>
+        @if(resentSearch.length || filteredTickersData.length){
+            <div class="search-results">
+                @if(resentSearch.length && !filteredTickersData.length){
+                    <div class="resent-search">
+                        <div>Resent Search</div>
+                        @for(item of resentSearch;track item){
+                            <div class="resent-search-list">
+                                <div (click)="selectResentTicker(item)">{{item}}</div>
+                            </div>
+                        }
+                      
+                    </div>
+                }
+                @if(filteredTickersData.length){
+                    <div>Results</div>
+                    @for(item of filteredTickersData;track item){
+                        <div class="filter-item" (click)="selectTicker(item.matchedTicker)">
+                            <div>{{item.matchedTicker}}</div>
+                            <div>{{item.title}}</div>
+                            <div>{{item.time}}</div>
+                        </div>
+                    }
+                }
+            </div>
+        }
+    </div>
+</div>
+
+}
+<div class="news">
+    @for(item of filteredNewsList;track item){
+        <lib-stock-row [newsItem]="item"></lib-stock-row>
+    }
+</div>

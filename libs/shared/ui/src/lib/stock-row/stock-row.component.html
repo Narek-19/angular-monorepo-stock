@@ -1,1 +1,18 @@
-<p>{{label}}</p>
+<div class="news-row-containr">
+   <div class="news-title">
+    <a [routerLink]="['/article-details', newsItem.id]">
+        {{newsItem.title}}
+    </a>
+    </div>
+   <div class="news-tegs">
+        <div>{{newsItem.date}} 	&#124;</div>
+        <div>{{newsItem.location}} 	&#124;</div>
+        <div class="tickers-list">
+        @if(newsItem.tickers.length){
+            @for(ticker of newsItem.tickers;track ticker){
+                <div class="ticker-name">{{ticker}}</div>
+            }
+        }   
+    </div>
+   </div> 
+</div>

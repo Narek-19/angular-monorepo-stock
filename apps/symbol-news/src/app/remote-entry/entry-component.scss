@@ -1,0 +1,71 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .filters{
+        display: flex;
+        .filter{
+            cursor: pointer;
+            border:1px solid gray;
+            padding:2px 5px;
+            margin:2px;
+            border-radius: 5px;
+        }
+    }
+    .search-section{
+        button{
+            cursor: pointer;
+            border:2px solid white;
+            padding:5px 10px;
+            border-radius: 30px;
+            background-color:transparent;
+            color:white;
+        }
+       
+    }
+}
+.search-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    div{
+        .search-bar{
+            border-radius: 8px;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            padding:0px 15px;
+            border:2px solid gray;
+            .search{
+                width: 100%;
+                input{
+                    padding: 10px;
+                    width: 100%;
+                    background-color: transparent;
+                    caret-color: white;
+                    color:white;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    .search-results{
+        margin-top:5px;
+        width: 400px;
+        border:2px solid gray;
+        border-radius: 8px;
+        padding:10px 15px;
+        .filter-item{
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 0px;
+        }
+    }
+    }
+}
+
+.newsItem{
+    display: flex;
+    margin-top: 20px;
+}
