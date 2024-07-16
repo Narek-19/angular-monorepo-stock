@@ -4,7 +4,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { debounceTime } from 'rxjs';
 import { StockRowComponent } from '@angular-monorepo-stock/ui';
 import { NewsService } from '@angular-monorepo-stock/shared-data';
-import { News, NewsItem } from '../shared/interfaces/market-news.interface';
+import { News, NewsItem } from '../shared/interfaces/symbol-news.interface';
 
 @Component({
   standalone: true,
