@@ -1,12 +1,14 @@
 .remote-menu{
     display: flex;
-    li{
-        padding:3px 5px;
-        border:1px solid white;
-        list-style-type: none;
-    }
-    a{
-        text-decoration: none;
-        color:white;
-    }
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+li{
+    padding:3px 5px;
+    border:1px solid white;
+    list-style-type: none;
 }
